@@ -9,10 +9,10 @@ const int SCREEN_HEIGHT = 480;
 
 int main(int argc, char* args[]) {
 	//The window we'll be rendering to
-	SDL_Window* window = NULL;
+	SDL_Window* window = nullptr;
 
 	//The surface contained by the window
-	SDL_Surface* screenSurface = NULL;
+	SDL_Surface* screenSurface = nullptr;
 
 	//Initialize SDL
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
@@ -20,7 +20,7 @@ int main(int argc, char* args[]) {
 	} else {
 		//Create window
 		window = SDL_CreateWindow("CatTender", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-		if (window == NULL) {
+		if (window == nullptr) {
 			std::cerr << "Window could not be created! SDL_Error: " << SDL_GetError() << std::endl;
 		} else {
 			//Get window surface

@@ -1,6 +1,6 @@
 #include "mouse.hpp"
 
-Mouse::Mouse(SDL_Event& e) : m_e(e) {
+Mouse::Mouse(SDL_Event& e) : m_e(e), y(0), x(0), left_mouse_pressed(false), right_mouse_pressed(false) {
 }
 
 int Mouse::get_x() {
@@ -19,6 +19,7 @@ bool Mouse::mouse_down(MOUSEBUTTONDIR dir) {
 	else if (dir == MOUSEBUTTONDIR::RIGHT) {
 		return right_mouse_pressed;
 	}
+	return false;
 }
 
 bool Mouse::mouse_up(MOUSEBUTTONDIR dir) {
@@ -28,6 +29,7 @@ bool Mouse::mouse_up(MOUSEBUTTONDIR dir) {
 	else if (dir == MOUSEBUTTONDIR::RIGHT) {
 		return !right_mouse_pressed;
 	}
+	return false;
 }
 
 // manual check mouse events
