@@ -1,0 +1,11 @@
+*.vcxproj*
+CaTender/CaTender/
+CaTender/.vs/
+CaTender/CaTender.sln
+.vs/
+CppProperties.json
+CaTender/x64/Debug/*.pdb
+CaTender/x64/Debug/*.exe
+CaTender/x64/Debug/*.tlog
+CaTender/x64/Debug/*.log
+
